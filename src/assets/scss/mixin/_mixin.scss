@@ -1,0 +1,22 @@
+/* mobile */
+
+@mixin icon-left($img, $w, $h) {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: vw($w);
+    height: vw($h);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url($img) no-repeat;
+    background-size: cover;
+  }
+}
+
+//vw指定
+@function vw($size, $viewport: 375) {
+  $rate: calc(100 / $viewport);
+  @return $rate * $size * 1vw;
+}

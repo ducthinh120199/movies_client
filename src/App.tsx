@@ -1,11 +1,10 @@
-import React from 'react';
+import React from 'react'
+import AppRoutes from './routes'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <AppRoutes />
+  )
 }
 
-export default App;
+export default App
